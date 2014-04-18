@@ -1,2 +1,36 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<div id="home" class="frame selected"></div>
+<div id="song_wrapper"></div>
+
+<template for="song_li">
+	<li><a href="#!/songs/{{ permalink }}/{{ lyrics.0.tag }}">{{ name }}</a></li>
+</template>
+
+<template for="song">
+	<div class="lyrics frame">
+		<ul class="meta_nav">
+			{{#lyrics}}
+				<li><a href="#!/songs/{{ permalink }}/{{ tag }}" data-tagger="{{ tag }}">{{ tag }}</a></li>
+			{{/lyrics}}
+		</ul>
+		
+		{{#lyrics}}
+			<p data-tag="{{ tag }}">
+				{{ content }}
+			</p>
+		{{/lyrics}}
+	</div>
+	
+	<div class="music frame">
+		<ul class="meta_nav">
+			{{#chords}}
+				<li><a href="#!/songs/{{ permalink }}/{{ tag }}" data-tagger="{{ tag }}">{{ tag }}</a></li>
+			{{/chords}}
+		</ul>
+		
+		{{#chords}}
+			<div data-tag="{{ tag }}">
+<pre>{{{ content }}}</pre>
+			</div>
+		{{/chords}}
+	</div>
+</div>

@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require firebase
+//= require mustache
+//= require underscore
 //= require_tree .

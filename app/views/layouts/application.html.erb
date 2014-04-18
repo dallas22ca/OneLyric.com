@@ -10,95 +10,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-		<div id="topnav">
-			
-			<ul class="mininav left">
-				<li>
-					<a href="#"><i class="fa fa-cog"></i></a>
-					<ul style="display: none; ">
-						<li><a href="#">Email In Media</a></li>
-						<li><a href="#">Choose Background</a></li>
-						<li><a href="#">Email In Media</a></li>
-						<li><a href="#">Email In Media</a></li>
-					</ul>
-				</li>
-				<li><a href="#" data-action="folders"><i class="fa fa-list"></i></a></li>
-				<li class="hide"><a href="#" data-action="key"><i class="fa fa-font"></i></a></li>
-				<li class="hide"><a href="#" data-action="music" data-toggle="off"><i class="fa fa-tags"></i></a></li>
-				<li><a href="#" data-action="live" data-toggle="off" class="signal_wrapper"><i class="fa fa-rss fa-rotate-315"></i></a></li>
-			</ul>
-			
-			<ul class="mininav right">
-				<li><a href="#" data-action="black" class="selected"><i class="fa fa-ban"></i></a></li>
-				<li><a href="#" data-action="bible"><i class="fa fa-book"></i></a></li>
-				<li><a href="#" data-action="lyrics"><i class="fa fa-music"></i></a></li>
-				<li><a href="#" data-action="home"><i class="fa fa-home"></i></a></li>
-			</ul>
-			
-			<h1>This is the Air</h1>
-			
-			<ul style="display: none; ">
-				<li><a href="#">Shout to the North</a></li>
-				<li><a href="#">I Could Sing of Your Love Forever</a></li>
-				<li><a href="#">See</a></li>
-				<li><a href="#"><i class="fa fa-plus-square"></i></a></li>
-			</ul>
-			
-			<div class="clear"></div>
-			
-		</div>
-		
-		<div id="home" class="frame"></div>
-		
-		<div id="lyrics" class="frame">
-			<ul class="meta_nav">
-				<li><a href="#" data-tag="c">c</a></li>
-				<li><a href="#" data-tag="v1" class="selected">v1</a></li>
-				<li><a href="#" data-tag="v2">v2</a></li>
-				<li><a href="#" data-tag="b">b</a></li>
-				<li><a href="#" data-tag="+">+</a></li>
-			</ul>
-			<p data-tag="v1" class="selected">
-				Light of the world<br>
-				You stepped out into darkness<br>
-				Opened my eyes, let me see<br>
-				Beauty that made this heart adore you<br>
-				Hope of a life spent with You
-			</p>
-			<p data-tag="v2">
-				King of all days<br>
-				Oh so highly exalted<br>
-				Glorious in heaven above<br>
-				Humbly You came to the earth You created<br>
-				All for love's sake became poor
-			</p>
-			<p data-tag="b">
-				I'll never know how much it cost<br>
-				To see my sin upon that cross
-			</p>
-			<p data-tag="c">
-				Here I am to worship<br>
-				Here I am to bow down<br>
-				Here I am to say that You're my God<br>
-				You're altogether lovely,<br>
-				Altogether worthy<br>
-				Altogether wonderful to me
-			</p>
-		</div>
-		
-		<div id="music" class="frame">
-			<pre>
-<span class="chords">C	G		Am	F</span>
-<span class="lyrics">This is the air I breathe</span>
-<span class="chords">C	G		Am	F</span>
-<span class="lyrics">This is the air I breathe</span>
-<span class="chords">C	F</span>
-<span class="lyrics">Your very Word</span>
-<span class="chords">Cm		F</span>
-<span class="lyrics">Spoken to me</span>
-			</pre>
-		</div>
+	
+	<%= render "nav" %>
+	
+	<%= yield %>
 
 </body>
 </html>

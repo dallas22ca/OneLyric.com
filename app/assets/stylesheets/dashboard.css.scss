@@ -31,6 +31,7 @@ a {
 	.mininav {
 		li {
 	    display: inline-block;
+			position: relative;
 			
 			a {
 				display: inline-block;
@@ -56,6 +57,18 @@ a {
 					color: #00CC7A;
 				}
 		  }
+		
+			ul {
+				position: absolute;
+				background: #000;
+				text-align: left;
+				left: 0;
+				width: 200px;
+			
+				li {
+					display: block;
+				}
+			}
 		}
 	}
 	
@@ -74,12 +87,16 @@ a {
 	padding: 80px;
 	display: none;
 	
+	&.selected {
+		display: block;
+	}
+	
 	&#home {
 		background: #00CC7A;
 		z-index: 97;
 	}
 	
-	&#lyrics {
+	&.lyrics {
 		z-index: 95;
 		background: url("/imgs/blue_universe.jpg");
 		text-align: center;
@@ -102,7 +119,8 @@ a {
 		}
 	}
 	
-	&#music {
+	&.music {
+		background: #eee;
 		z-index: 96;
 		
 	  pre {
@@ -120,6 +138,19 @@ a {
 				margin-top: 10px;
 			}
 	  }
+		
+		.meta_nav {
+			a {
+				color: #777;
+				box-shadow: none;
+				border: 1px solid #aaa;
+				
+				&.selected {
+					background: #aaa;
+					color: #fff;
+				}
+			}
+		}
 	}
 	
 	.meta_nav {
@@ -145,6 +176,7 @@ a {
 				line-height: 21px;
 				padding: 14px 0px 16px;
 				box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+				text-align: center;
 				
 				&.selected {
 					background: rgba(255, 255, 255, 0.6);
@@ -173,4 +205,8 @@ a {
 
 .clear {
   clear: both;
+}
+
+template {
+	display: none;
 }
